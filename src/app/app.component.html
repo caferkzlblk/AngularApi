@@ -1,0 +1,28 @@
+<div *ngIf="veri">
+  <div class="text-center">
+    <h1 class="display-4"> İzmir İZBAN İstasyon Bilgileri</h1>
+  </div>
+
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Boylam</th>
+        <th>Enlem</th>
+        <th>IstasyonId</th>
+        <th>IstasyonSirasi</th>
+        <th>IstasyonAdi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let istasyon of veri; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ istasyon.Boylam }}</td>
+        <td>{{ istasyon.Enlem }}</td>
+        <td>{{ istasyon.IstasyonId }}</td>
+        <td>{{ istasyon.IstasyonSirasi }}</td>
+        <td>{{ istasyon.IstasyonAdi }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
